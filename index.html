@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sai Krishna Reddy Andra | Financial Analyst Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* HERO / HEADER */
+
+    .hero {
+      background: radial-gradient(circle at top left, #1d4ed8, #0f172a);
+      color: #f9fafb;
+      padding: 3rem 1.5rem 3.5rem;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .hero-text {
+      flex: 1 1 320px;
+      min-width: 0;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin: 0 0 0.5rem;
+    }
+
+    .role {
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
+      color: #bfdbfe;
+    }
+
+    .hero-tagline {
+      font-size: 1.05rem;
+      color: #e5e7eb;
+      max-width: 600px;
+    }
+
+    .hero-highlight {
+      margin-top: 1.1rem;
+      font-size: 0.95rem;
+      color: #c7d2fe;
+    }
+
+    .hero-photo {
+      flex: 0 0 260px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-photo-inner {
+      width: 260px;
+      height: 320px;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 18px 35px rgba(15, 23, 42, 0.45);
+      border: 2px solid rgba(191, 219, 254, 0.6);
+      transform: translateY(0);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #0b1120;
+    }
+
+    .hero-photo-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-photo-inner:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 45px rgba(15, 23, 42, 0.7);
+    }
+
+    /* GENERAL LAYOUT */
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+
+    h2.section-title {
+      text-align: center;
+      font-size: 1.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 0.98rem;
+      color: #6b7280;
+      margin-bottom: 2rem;
+    }
+
+    /* ABOUT */
+
+    .about-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+      font-size: 1.02rem;
+      color: #1f2933;
+    }
+
+    .about-card strong {
+      font-weight: 600;
+      color: #111827;
+    }
+
+    /* PROJECTS */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .project-card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 1.5rem 1.5rem 1.4rem;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.04);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 28px rgba(15, 23, 42, 0.12);
+      border-color: #4f46e5;
+    }
+
+    .project-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: #111827;
+    }
+
+    .project-tagline {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #6b7280;
+      margin-bottom: 0.8rem;
+    }
+
+    .project-body {
+      font-size: 0.95rem;
+      color: #374151;
+      margin-bottom: 0.6rem;
+    }
+
+    .project-tech {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #4f46e5;
+    }
+
+    /* SKILLS */
+
+    .skills-groups {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .skill-group {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.4rem 1.5rem 1.2rem;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.05);
+      border: 1px solid #e5e7eb;
+    }
+
+    .skill-group h3 {
+      margin: 0 0 0.9rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .skill-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-badge {
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #4f46e5;
+      font-size: 0.86rem;
+      font-weight: 500;
+      border: 1px solid #e0e7ff;
+    }
+
+    /* CONNECT */
+
+    .connect-section {
+      background: #f3f4ff;
+      border-top: 1px solid #e5e7eb;
+      padding: 3rem 1.5rem 2.5rem;
+    }
+
+    .connect-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .connect-inner p {
+      color: #4b5563;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+
+    .contact-cards {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .contact-icon {
+      width: 28px;
+      height: 28px;
+    }
+
+    .contact-label {
+      font-size: 0.95rem;
+      color: #111827;
+      font-weight: 600;
+    }
+
+    .contact-link {
+      display: block;
+      font-size: 0.95rem;
+      color: #4f46e5;
+      font-weight: 600;
+    }
+
+    .contact-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.2rem;
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 768px) {
+      .hero-inner {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .hero-text h1 {
+        font-size: 2.1rem;
+      }
+
+      .hero-tagline {
+        margin: 0.5rem auto 0;
+      }
+
+      .hero-photo {
+        margin-bottom: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="role">Financial Analyst · FP&amp;A</div>
+        <h1>Sai Krishna Reddy Andra</h1>
+        <p class="hero-tagline">
+          Financial analyst focused on turning complex data into clear, actionable insights for smarter budgeting, forecasting, and strategic decisions.
+        </p>
+        <p class="hero-highlight">
+          Combining financial modelling, data analytics, and visualization to improve planning accuracy and business performance.
+        </p>
+      </div>
+
+      <div class="hero-photo">
+        <div class="hero-photo-inner">
+          <!-- Upload a photo named profile-finance.jpg into the repo -->
+          <img src="profile-finance.jpg" alt="Sai Krishna Reddy Andra" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="container">
+    <h2 class="section-title">About</h2>
+    <p class="section-subtitle">Finance, analytics, and data-driven decision-making.</p>
+
+    <div class="about-card">
+      I’m a <strong>Financial Analyst</strong> with experience in budgeting, forecasting, and performance analysis across corporate and non-profit environments.
+      With a strong foundation in finance and analytics, I focus on building models and dashboards that improve visibility, control risk, and support
+      strategic decisions.
+      <br><br>
+      I hold a <strong>Master’s degree in Finance</strong> and have hands-on experience working with stakeholders across operations, accounting, and leadership
+      teams. My work spans financial planning &amp; analysis, variance analysis, and data-driven reporting using tools such as <strong>Power BI, SQL, Excel, and Python</strong>.
+      <br><br>
+      I enjoy translating raw financial data into clear stories — whether it’s assessing profitability, modeling future scenarios, or tracking KPIs — so that
+      decision-makers can act with confidence.
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="container">
+    <h2 class="section-title">Projects</h2>
+    <p class="section-subtitle">Applied finance and analytics projects demonstrating modeling, forecasting, and reporting skills.</p>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-title">🏥 Healthcare Cost &amp; Cohort Analysis</div>
+        <div class="project-tagline">Forecasting medical costs and loss ratios.</div>
+        <div class="project-body">
+          Built cohort-based cost models to analyze healthcare claims and predict medical loss ratios under different assumptions. Performed scenario analysis
+          to assess profitability and risk sensitivity.
+        </div>
+        <div class="project-tech">Tech: Excel, Statistical Modeling, Scenario Analysis, Financial Forecasting</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-title">📈 Equity Valuation &amp; Recommendation</div>
+        <div class="project-tagline">Bottom-up valuation and investment thesis.</div>
+        <div class="project-body">
+          Developed equity valuation models using cash-flow projections, peer multiples, and macro drivers. Synthesized findings into an investment
+          recommendation supported by sensitivity and risk analysis.
+        </div>
+        <div class="project-tech">Tech: Excel, Equity Research, DCF, Sensitivity Analysis</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-title">📊 AdTech Market &amp; ROI Simulation</div>
+        <div class="project-tagline">Revenue forecasts for digital advertising scenarios.</div>
+        <div class="project-body">
+          Modeled adoption curves, pricing tiers, and margin profiles for a simulated ad-tech platform. Built multi-scenario revenue and ROI forecasts to
+          inform go-to-market and investment decisions.
+        </div>
+        <div class="project-tech">Tech: Power BI, Forecasting, ROI Modeling, Market Analytics</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-title">🏦 Credit Risk &amp; Portfolio Metrics</div>
+        <div class="project-tagline">Risk-adjusted performance and capital analysis.</div>
+        <div class="project-body">
+          Designed credit risk metrics aligned with regulatory guidelines and evaluated risk-adjusted returns across portfolios. Supported strategy by
+          quantifying trade-offs between growth, risk, and capital allocation.
+        </div>
+        <div class="project-tech">Tech: Excel, Risk Modeling, Basel Concepts, Financial Analysis</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="container">
+    <h2 class="section-title">Skills &amp; Tools</h2>
+    <p class="section-subtitle">Blending financial expertise with analytics and reporting.</p>
+
+    <div class="skills-groups">
+
+      <div class="skill-group">
+        <h3>Financial Analysis &amp; Modeling</h3>
+        <div class="skill-badges">
+          <span class="skill-badge">Budgeting &amp; Forecasting</span>
+          <span class="skill-badge">Financial Modeling</span>
+          <span class="skill-badge">DCF &amp; Valuation</span>
+          <span class="skill-badge">Variance Analysis</span>
+          <span class="skill-badge">Scenario &amp; Sensitivity</span>
+          <span class="skill-badge">KPI Tracking</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Data &amp; Analytics</h3>
+        <div class="skill-badges">
+          <span class="skill-badge">Excel (Advanced)</span>
+          <span class="skill-badge">Power BI</span>
+          <span class="skill-badge">Tableau</span>
+          <span class="skill-badge">SQL</span>
+          <span class="skill-badge">Python (Analytics)</span>
+          <span class="skill-badge">Data Visualization</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Finance &amp; Operations</h3>
+        <div class="skill-badges">
+          <span class="skill-badge">FP&amp;A</span>
+          <span class="skill-badge">Management Reporting</span>
+          <span class="skill-badge">Profitability Analysis</span>
+          <span class="skill-badge">Cost Optimization</span>
+          <span class="skill-badge">Risk Analysis</span>
+          <span class="skill-badge">Stakeholder Communication</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONNECT -->
+  <section class="connect-section">
+    <div class="connect-inner">
+      <h2 class="section-title">Let&apos;s Connect</h2>
+      <p>
+        I&apos;m open to opportunities in financial analysis, FP&amp;A, and strategy roles where I can use data and modeling to support better business decisions.
+        Feel free to reach out.
+      </p>
+
+      <div class="contact-cards">
+        <div class="contact-card">
+          <img class="contact-icon" src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email icon" />
+          <div>
+            <div class="contact-label">Email</div>
+            <a class="contact-link" href="mailto:saikrishnareddy.finance@gmail.com">saikrishnareddy.finance@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <img class="contact-icon" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn icon" />
+          <div>
+            <div class="contact-label">LinkedIn</div>
+            <a class="contact-link" href="https://www.linkedin.com/in/sai-krishna-reddy-andra-63192929a" target="_blank">
+              www.linkedin.com/in/sai-krishna-reddy-andra-63192929a
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Sai Krishna Reddy Andra · Financial Analyst 
+  </footer>
+
+</body>
+</html>
